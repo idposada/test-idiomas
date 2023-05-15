@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'interbold';
+    src: url('font/inter-bold-webfont.woff2') format('woff2'),
+         url('font/inter-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'acherus_grotesqueblack';
+    src: url('font/acherus_grotesque_-_black-webfont.woff2') format('woff2'),
+         url('font/acherus_grotesque_-_black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'acherus_grotesquebold';
+    src: url('font/acherus_grotesque_-_bold-webfont.woff2') format('woff2'),
+         url('font/acherus_grotesque_-_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'acherus_grotesqueextrabold';
+    src: url('font/acherus_grotesque_-_extrabold-webfont.woff2') format('woff2'),
+         url('font/acherus_grotesque_-_extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'acherus_grotesquelight';
+    src: url('font/acherus_grotesque_-_light-webfont.woff2') format('woff2'),
+         url('font/acherus_grotesque_-_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'acherus_grotesquemedium';
+    src: url('font/acherus_grotesque_-_medium-webfont.woff2') format('woff2'),
+         url('font/acherus_grotesque_-_medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'acherus_grotesqueregular';
+    src: url('font/acherus_grotesque_-_regular-webfont.woff2') format('woff2'),
+         url('font/acherus_grotesque_-_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'acherus_grotesquethin';
+    src: url('font/acherus_grotesque_-_thin-webfont.woff2') format('woff2'),
+         url('font/acherus_grotesque_-_thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+body{
+  background-image: url(img/trama.png);
+  background: linear-gradient(103.16deg, #5642CC 20.73%, #7C6BE1 92.06%);
+}
+.bienvenida{
+  background-image: url(img/trama.png);
+  padding: 300px 0px 229px 0px;
+  background-size: cover;
+background-repeat: no-repeat;
+}
+
+.sec-registro{
+  background-image: url(img/trama.png);
+  padding: 87px 0px 229px 0px;
+  background-size: cover;
+background-repeat: no-repeat;
+}
+
+.logo-bosque{
+margin-top: 13%;
+width: 100%;
+}
+
+.txt-blanco{
+  font-family: 'acherus_grotesquemedium';
+font-style: normal;
+font-weight: 850;
+font-size: 20px;
+line-height: 21px;
+text-align: center;
+
+color: #FFFFFF;
+
+margin-bottom: 50px;
+
+}
+
+.txt-intro{
+  font-family: 'interbold';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 44px;
+/* or 91% */
+text-align: center;
+
+
+color: #FFFFFF;
+
+}
+
+.txt-abajo {
+font-family: 'acherus_grotesquemedium';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+color: #FFFFFF;
+}
+
+.boton {
+padding: 15px 0 15px 0;
+}
+
+.forn-registro {
+background: rgba(195, 230, 225, 0.25);
+border-radius: 16px;
+padding: 15px;
+}
+
+.btn-blanco{
+  font-family: 'acherus_grotesquemedium';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 28px;
+text-align: center;
+color: #5642CC;
+background: #F2F1FC;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 44px;
+padding-top: 13px;
+
+}
+
+input[type=text] {
+  border: 1px solid #FFFFFF !important;
+border-radius: 8px !important;
+color: #ffffff;
+
+}
+
+.txt-terminos{
+  font-family: 'acherus_grotesquemedium';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 12px;
+/* or 120% */
+
+
+color: #FFFFFF;
+}
