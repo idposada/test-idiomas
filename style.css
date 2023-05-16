@@ -76,25 +76,30 @@ html{
 
 
 body{
-  background-image: url(img/trama.png);
-  background: linear-gradient(103.16deg, #5642CC 20.73%, #7C6BE1 92.06%);
+
+
 }
+ .bg-morado{
+  background: linear-gradient(103.16deg, #5642CC 20.73%, #7C6BE1 92.06%);
+ }
+
+
 .bienvenida{
   background-image: url(img/trama.png);
-  padding: 300px 0px 229px 0px;
+  padding: 300px 0px 283px 0px;
   background-size: cover;
 background-repeat: no-repeat;
 }
 
 .sec-registro{
   background-image: url(img/trama.png);
-  padding: 87px 0px 229px 0px;
+  padding: 87px 20px 247px 20px;
   background-size: cover;
 background-repeat: no-repeat;
 }
 
 .logo-bosque{
-margin-top: 13%;
+padding-top: 12%;
 width: 100%;
 }
 
