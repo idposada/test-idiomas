@@ -168,6 +168,13 @@ color: #ffffff;
 
 }
 
+input[type=number] {
+  border: 1px solid #FFFFFF !important;
+border-radius: 8px !important;
+color: #ffffff;
+
+}
+
 .txt-terminos{
   font-family: 'acherus_grotesquemedium';
 font-style: normal;
