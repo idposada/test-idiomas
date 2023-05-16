@@ -191,3 +191,56 @@ line-height: 12px;
 
 color: #FFFFFF;
 }
+
+.nombre-usuario{
+  font-family: 'acherus_grotesquebold';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 32px;
+/* identical to box height, or 100% */
+
+
+/* neutrals/dark 1 */
+
+color: #1F2933;
+}
+
+.text-pequeno{
+  font-family: 'acherus_grotesquemedium';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+text-align: left;
+/* identical to box height, or 150% */
+
+text-align: center;
+
+/* neutrals/grey 1 */
+
+color: #6B7580;
+}
+
+.nommbres{
+  margin-top: 8%;
+}
+
+.banner img{
+  width: 100%;
+}
+
+.idioma p{
+  font-family: 'acherus_grotesquemedium';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+text-align: center;
+
+/* neutrals/dark 1 */
+
+color: #1F2933;
+}
