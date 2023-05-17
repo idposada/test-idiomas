@@ -226,8 +226,12 @@ color: #6B7580;
   margin-top: 8%;
 }
 
+.banner{
+  text-align: center;
+}
+
 .banner img{
-  width: 100%;
+  /* width: 100%; */
 }
 
 .idioma p{
@@ -243,4 +247,39 @@ text-align: center;
 /* neutrals/dark 1 */
 
 color: #1F2933;
+}
+
+.idioma-solo {
+display: flex;
+background: #FFFFFF;
+box-shadow: 10px 3px 50px rgba(30, 65, 110, 0.2);
+border-radius: 20px;
+padding: 5%;
+margin-top: 7%;
+}
+
+.info-idioma {
+display: grid;
+margin-left: 5%;
+}
+
+.nombre-idioma {
+font-family: 'acherus_grotesquemedium';
+font-style: normal;
+font-weight: 850;
+font-size: 18px;
+line-height: 24px;
+color: #1F2933;
+}
+
+.idioma-solo a{
+margin-left: 49%;
+}
+
+.icon-flecha{
+/*  margin-left: 49%; */
+}
+
+.img-abajo{
+  text-align: center;
 }
