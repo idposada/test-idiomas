@@ -283,3 +283,123 @@ margin-left: 49%;
 .img-abajo{
   text-align: center;
 }
+
+
+.num-pregunta{
+
+  padding-top: 10%;
+  padding-bottom: 10%;
+
+  font-family: 'acherus_grotesquemedium';
+font-style: normal;
+font-weight: 850;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+
+
+color: #FFFFFF;
+}
+
+.timeline{
+  margin-top: 8%;
+}
+
+.frame-pregunta{
+  margin-top: 8%;
+
+  background-color: #ffffff;
+
+
+border-radius: 24px;
+
+padding-top: 5%
+
+}
+
+.text-gris{
+  font-family: 'acherus_grotesquemedium';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+
+
+align-items: center;
+letter-spacing: 0.02em;
+text-align: center;
+
+
+
+color: #B4B1B1;
+}
+
+.txt-pregunta{
+  font-family: 'acherus_grotesquemedium';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 16px;
+/* identical to box height, or 89% */
+
+text-align: center;
+color: #000000 !important;
+}
+
+.respuestas{
+  display: grid;
+margin-top: -53%;
+padding-left: 7%;
+padding-right: 7%;
+}
+
+.btn-respuesta{
+  background: rgba(51, 182, 169, 0.8);
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding-top: 3%;
+padding-bottom: 3%;
+height: auto;
+margin: 1%;
+
+font-family: 'acherus_grotesquemedium';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+
+/* identical to box height, or 100% */
+
+
+color: #FFFFFF;
+
+
+
+}
+.btn-respuesta-correcta{
+background: radial-gradient(64.17% 35.41% at 62.8% 45.69%, rgba(183, 214, 118, 0.8) 0%, rgba(128, 188, 0, 0.8) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding-top: 3%;
+padding-bottom: 3%;
+height: auto;
+margin: 1%;
+font-family: 'acherus_grotesquemedium';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+
+/* identical to box height, or 100% */
+
+
+color: #FFFFFF;
+
+
+
+}
+
+.img-pregunta > img:nth-child(1) {
+width: 100%;
+}
