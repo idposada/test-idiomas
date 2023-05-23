@@ -403,3 +403,48 @@ color: #FFFFFF;
 .img-pregunta > img:nth-child(1) {
 width: 100%;
 }
+
+.text-gris{
+  font-family: 'acherus_grotesquemedium';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+text-align: left;
+
+/* neutrals/grey 1 */
+
+color: #6B7580;
+}
+
+.resultado{
+  text-align: center;
+}
+
+.num-puntaje{
+  font-family: 'acherus_grotesqueextrabold';
+font-style: normal;
+font-weight: 850;
+font-size: 40px;
+line-height: 50px;
+/* identical to box height */
+margin-top: -16%;
+
+color: #000000;
+}
+
+.text-resultado{
+  font-family: 'acherus_grotesquemedium';
+font-style: normal;
+font-weight: 900;
+font-size: 14px;
+line-height: 16px;
+/* or 118% */
+
+text-align: center;
+
+color: #5642CC;
+margin-top: 12%;
+}
