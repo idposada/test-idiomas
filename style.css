@@ -448,3 +448,14 @@ text-align: center;
 color: #5642CC;
 margin-top: 12%;
 }
+
+
+.cat-disabled{
+  filter: grayscale(100%);
+}
+/* escala grises */
+.cat-disabled{
+  filter: grayscale(100%);
+  pointer-events: none;
+  cursor: default;
+}
