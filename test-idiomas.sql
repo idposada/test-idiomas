@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 06-06-2023 a las 17:55:12
+-- Tiempo de generación: 07-06-2023 a las 02:40:11
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -68,14 +68,14 @@ INSERT INTO `idioma` (`id`, `idioma`) VALUES
 CREATE TABLE `pregunta` (
   `id` int(11) NOT NULL,
   `pregunta` longtext NOT NULL,
-  `id_idioma` int(11) NOT NULL
+  `id_categoria` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Volcado de datos para la tabla `pregunta`
 --
 
-INSERT INTO `pregunta` (`id`, `pregunta`, `id_idioma`) VALUES
+INSERT INTO `pregunta` (`id`, `pregunta`, `id_categoria`) VALUES
 (1, 'What is this?', 1),
 (2, 'What?s the weather like today?', 1),
 (3, 'How often do you go to the movies?', 1),
@@ -120,6 +120,15 @@ CREATE TABLE `puntaje` (
   `puntaje` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `puntaje`
+--
+
+INSERT INTO `puntaje` (`id`, `id_usuario`, `id_categoria`, `puntaje`) VALUES
+(1, 2, 1, 20),
+(2, 3, 1, 20),
+(3, 4, 1, 20);
+
 -- --------------------------------------------------------
 
 --
@@ -128,7 +137,7 @@ CREATE TABLE `puntaje` (
 
 CREATE TABLE `respuesta` (
   `id` int(11) NOT NULL,
-  `texto` longtext NOT NULL,
+  `descripcion` longtext NOT NULL,
   `id_pregunta` int(11) NOT NULL,
   `correcta` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
@@ -137,7 +146,7 @@ CREATE TABLE `respuesta` (
 -- Volcado de datos para la tabla `respuesta`
 --
 
-INSERT INTO `respuesta` (`id`, `texto`, `id_pregunta`, `correcta`) VALUES
+INSERT INTO `respuesta` (`id`, `descripcion`, `id_pregunta`, `correcta`) VALUES
 (1, 'This is a blue jacket', 1, 1),
 (2, 'This is a jacket blue', 1, 0),
 (3, 'These are blue jacket', 1, 0),
@@ -274,7 +283,9 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `email`, `celular`, `created_at`) VALUES
 (1, 'juan', 'sierra', 'me@gmcil.co', '3212261758', '2023-06-05 17:59:29'),
-(2, 'alejandro', 'sierra', 'ivan@prueba.com', '3223851417', '2023-06-06 15:26:30');
+(2, 'alejandro', 'sierra', 'ivan@prueba.com', '3223851417', '2023-06-06 15:26:30'),
+(3, 'alejandro', 'sierra', 'MStivenR_1998@hotmail.com', '3223851417', '2023-06-06 23:57:40'),
+(4, 'alejandro', 'sierra', 'MStivenR_1998@hotmail.com', '3212261759', '2023-06-07 00:34:50');
 
 --
 -- Índices para tablas volcadas
@@ -296,7 +307,8 @@ ALTER TABLE `idioma`
 -- Indices de la tabla `pregunta`
 --
 ALTER TABLE `pregunta`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_categoria` (`id_categoria`);
 
 --
 -- Indices de la tabla `puntaje`
@@ -344,7 +356,7 @@ ALTER TABLE `pregunta`
 -- AUTO_INCREMENT de la tabla `puntaje`
 --
 ALTER TABLE `puntaje`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `respuesta`
@@ -356,7 +368,17 @@ ALTER TABLE `respuesta`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `pregunta`
+--
+ALTER TABLE `pregunta`
+  ADD CONSTRAINT `id_categoria` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

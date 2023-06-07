@@ -12,7 +12,7 @@ if(!isset($_REQUEST['id_pregunta']) ){
     $_REQUEST['id_pregunta'] = 0;
  }
 
-$final = 11;
+$final = 16;
 $id_pregunta = $_REQUEST['id_pregunta'];
 
 $j= $_REQUEST['j'];
@@ -21,15 +21,15 @@ $puntaje = $_REQUEST['puntaje'] ;
 
 
 $input = array(
-    1=>array(0,1,2,3,4,5,6,7,8,9,10),
-    2=> array(0,11,12,13,14,15,16,17,18,19,20));
+    1=>array(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15),
+    2=> array(0,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30));
     
   $input = $input[$cat];
 //   shuffle($input);
 
 
 //Si el array esta vacio respondio todas las preguntas
-if($j != 11)
+if($j != 16)
 {
     
     $preg = $input[$j];
@@ -80,7 +80,7 @@ elseif($final == $j)
         $count_cat = 0;
         $count_cat += $cat;
 
-       header("Location: categoria.php?id=".$id."&count=".$count_cat);
+       header("Location: idioma.php?id=".$id."&count=".$count_cat);
     }
 }
 else

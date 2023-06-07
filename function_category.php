@@ -13,7 +13,7 @@ if(!isset($_REQUEST['count']) ){
 }
 
  
-if($_REQUEST['count']>=10){
+if($_REQUEST['count']>=1){
   header("Location: resultado.php?id=".$id);
 
 }

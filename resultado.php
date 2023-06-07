@@ -1,4 +1,8 @@
-<?php include('header.php') ?>
+<?php include('header.php');
+
+    include('function_category.php');
+    include('function_result.php');
+    ?>
 
 <main>
   <section class="row banner">
@@ -8,7 +12,8 @@
   <section class="row container nommbres">
 
       <div class="nombre-usuario">
-        Hola Laura
+        Hola <?php getName($id);
+    ?>
     </div>
     <div class="text-gris">
       Aquí están tus resultados
@@ -21,7 +26,7 @@
     <img src="img/img-indicador.png" alt="">
 
     <div class="num-puntaje">
-      23
+    <?php echo score($id);?>
   </div>
 
   <div class="text-resultado">

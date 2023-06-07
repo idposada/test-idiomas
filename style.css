@@ -459,3 +459,19 @@ margin-top: 12%;
   pointer-events: none;
   cursor: default;
 }
+
+
+.button0:active {
+  /* set time duration to your needs */
+  animation: gradient 100ms;
+  background: #f88;
+  color: #fff;
+  box-shadow: none;
+}
+.button1:active {
+  /* set time duration to your needs */
+  animation: gradient2 100ms;
+  background: #7af77a;
+  color: #fff;
+  box-shadow: none;
+}
