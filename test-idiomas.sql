@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 07-06-2023 a las 02:40:11
+-- Tiempo de generación: 22-06-2023 a las 03:33:12
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -86,26 +86,36 @@ INSERT INTO `pregunta` (`id`, `pregunta`, `id_categoria`) VALUES
 (8, 'What would you do if you were an animal?', 1),
 (9, 'When will the movie be filmed?', 1),
 (10, 'If you look up at (1)_____ sky (2) ______ it\'s raining and sunny, you will see the rainbow. It is (3)______ magical phenomenon (4) _____ is formed by (5)________ nature. Red, orange, yellow, green, blue, violet and purple are the colors that can be seen in the rainbow.', 1),
-(11, 'Where is Georgina? It is late and we have to go.', 1),
-(12, 'My best friend is Paul. Do you know him?', 1),
-(13, 'What is the most important thing for you? ', 1),
-(14, 'Did you hear the recent news about your favorite pop star?', 1),
-(15, 'Are you accustomed to waking up early on the weekend?', 1),
-(16, 'Qu?est-ce que c?est cet objet?', 2),
-(17, 'Quel est le temps aujourd?hui?', 2),
-(18, 'Quand est-ce que tu vas au cin?ma?', 2),
-(19, 'La fille de mon fr?re m?a visit? Samedi dernier, Qui?', 2),
-(20, 'Tu viens d?o??', 2),
-(21, 'Qu?est-ce que tu penses du nouveau restaurant?', 2),
-(22, 'As-tu rencontr? le professeur de fran?ais? ', 2),
-(23, 'Si tu ?tais un animal, lequel choisirais-tu?', 2),
-(24, 'Combien de films a-t-il fait pendant sa vie?', 2),
-(25, 'Si tu regardes (1)_____ ciel (2) ______ il pleut et il y a du soleil, tu verras l?arc-en-ciel. C?est (3)______ ph?nom?ne magique (4) _____ est form? par (5)________ nature. Rouge, orange, jaune, vert, blue, indigo et violet sont les couleurs que tu peux voir briller.', 2),
-(26, 'O? est Georgina? Le train va arriver et _____.', 2),
-(27, 'Mon meilleur ami est Claude. Est-ce que tu le connais?', 2),
-(28, 'Est-ce que tu vas souvent ? la biblioth?que? ', 2),
-(29, 'Qu?est-ce qu?il t?a dit sur le projet?', 2),
-(30, 'Quels sont tes plans pour les vacances?', 2);
+(11, 'If you look up at (1)_____ sky (2) ______ it\'s raining and sunny, you will see the rainbow. It is (3)______ magical phenomenon (4) _____ is formed by (5)________ nature. Red, orange, yellow, green, blue, violet and purple are the colors that can be seen in the rainbow.', 1),
+(12, 'If you look up at (1)_____ sky (2) ______ it\'s raining and sunny, you will see the rainbow. It is (3)______ magical phenomenon (4) _____ is formed by (5)________ nature. Red, orange, yellow, green, blue, violet and purple are the colors that can be seen in the rainbow.', 1),
+(13, 'If you look up at (1)_____ sky (2) ______ it\'s raining and sunny, you will see the rainbow. It is (3)______ magical phenomenon (4) _____ is formed by (5)________ nature. Red, orange, yellow, green, blue, violet and purple are the colors that can be seen in the rainbow.', 1),
+(14, 'If you look up at (1)_____ sky (2) ______ it\'s raining and sunny, you will see the rainbow. It is (3)______ magical phenomenon (4) _____ is formed by (5)________ nature. Red, orange, yellow, green, blue, violet and purple are the colors that can be seen in the rainbow.', 1),
+(15, 'If you look up at (1)_____ sky (2) ______ it\'s raining and sunny, you will see the rainbow. It is (3)______ magical phenomenon (4) _____ is formed by (5)________ nature. Red, orange, yellow, green, blue, violet and purple are the colors that can be seen in the rainbow.', 1),
+(16, 'Where is Georgina? It is late and we have to go.', 1),
+(17, 'My best friend is Paul. Do you know him?', 1),
+(18, 'What is the most important thing for you? ', 1),
+(19, 'Did you hear the recent news about your favorite pop star?', 1),
+(20, 'Are you accustomed to waking up early on the weekend?', 1),
+(21, 'Qu?est-ce que c?est cet objet?', 2),
+(22, 'Quel est le temps aujourd?hui?', 2),
+(23, 'Quand est-ce que tu vas au cin?ma?', 2),
+(24, 'La fille de mon fr?re m?a visit? Samedi dernier, Qui?', 2),
+(25, 'Tu viens d?o??', 2),
+(26, 'Qu?est-ce que tu penses du nouveau restaurant?', 2),
+(27, 'As-tu rencontr? le professeur de fran?ais? ', 2),
+(28, 'Si tu ?tais un animal, lequel choisirais-tu?', 2),
+(29, 'Combien de films a-t-il fait pendant sa vie?', 2),
+(30, 'Si tu regardes (1)_____ ciel (2) ______ il pleut et il y a du soleil, tu verras l?arc-en-ciel. C?est (3)______ ph?nom?ne magique (4) _____ est form? par (5)________ nature. Rouge, orange, jaune, vert, blue, indigo et violet sont les couleurs que tu peux voir briller.', 2),
+(31, 'Si tu regardes (1)_____ ciel (2) ______ il pleut et il y a du soleil, tu verras l?arc-en-ciel. C?est (3)______ ph?nom?ne magique (4) _____ est form? par (5)________ nature. Rouge, orange, jaune, vert, blue, indigo et violet sont les couleurs que tu peux voir briller.', 2),
+(32, 'Si tu regardes (1)_____ ciel (2) ______ il pleut et il y a du soleil, tu verras l?arc-en-ciel. C?est (3)______ ph?nom?ne magique (4) _____ est form? par (5)________ nature. Rouge, orange, jaune, vert, blue, indigo et violet sont les couleurs que tu peux voir briller.', 2),
+(33, 'Si tu regardes (1)_____ ciel (2) ______ il pleut et il y a du soleil, tu verras l?arc-en-ciel. C?est (3)______ ph?nom?ne magique (4) _____ est form? par (5)________ nature. Rouge, orange, jaune, vert, blue, indigo et violet sont les couleurs que tu peux voir briller.', 2),
+(34, 'Si tu regardes (1)_____ ciel (2) ______ il pleut et il y a du soleil, tu verras l?arc-en-ciel. C?est (3)______ ph?nom?ne magique (4) _____ est form? par (5)________ nature. Rouge, orange, jaune, vert, blue, indigo et violet sont les couleurs que tu peux voir briller.', 2),
+(35, 'Si tu regardes (1)_____ ciel (2) ______ il pleut et il y a du soleil, tu verras l?arc-en-ciel. C?est (3)______ ph?nom?ne magique (4) _____ est form? par (5)________ nature. Rouge, orange, jaune, vert, blue, indigo et violet sont les couleurs que tu peux voir briller.', 2),
+(36, 'O? est Georgina? Le train va arriver et _____.', 2),
+(37, 'Mon meilleur ami est Claude. Est-ce que tu le connais?', 2),
+(38, 'Est-ce que tu vas souvent ? la biblioth?que? ', 2),
+(39, 'Qu?est-ce qu?il t?a dit sur le projet?', 2),
+(40, 'Quels sont tes plans pour les vacances?', 2);
 
 -- --------------------------------------------------------
 
@@ -127,7 +137,8 @@ CREATE TABLE `puntaje` (
 INSERT INTO `puntaje` (`id`, `id_usuario`, `id_categoria`, `puntaje`) VALUES
 (1, 2, 1, 20),
 (2, 3, 1, 20),
-(3, 4, 1, 20);
+(3, 4, 1, 20),
+(4, 5, 1, 20);
 
 -- --------------------------------------------------------
 
@@ -265,6 +276,32 @@ INSERT INTO `respuesta` (`id`, `descripcion`, `id_pregunta`, `correcta`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `resultado`
+--
+
+CREATE TABLE `resultado` (
+  `id` int(9) NOT NULL,
+  `descripcion` varchar(500) NOT NULL,
+  `rango` int(9) NOT NULL,
+  `categoria` int(9) NOT NULL,
+  `ruta` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `resultado`
+--
+
+INSERT INTO `resultado` (`id`, `descripcion`, `rango`, `categoria`, `ruta`) VALUES
+(1, '¡Sigue practicando!\r\nLa práctica hace al maestro, ¡mejora tus habilidades cantando New York, New York de Frank Sinatra!', 7, 1, 'frank.gif'),
+(2, '¡No estás mal, pero tampoco estás bien!\n\nCon este nivel de inglés puedes comprar entradas a cine en New York, pero no te garantizamos que entiendas toda la película.', 15, 1, 'chris.gif'),
+(3, '¡Wow, vas por buen camino!\n\nYa puedes visitar los parques de  Disney y mantener una conversación con Katy Perry.', 20, 1, 'katy.gif'),
+(4, '¡Wow, vas por buen camino!\n\n¡No te desanimes!\n\nSeguro no salió como esperabas, pero es cuestión de práctica y de estudiar más, petite sauterelle.', 7, 2, 'pinocho.gif'),
+(5, '¡Vas por buen camino, pero te falta un poco más!\n\nEsfuérzate un poco más para visitar París en tus próximas vacaciones con confianza.', 15, 2, 'rata.gif'),
+(6, 'Fantastique!\n\nPodrías mantener una conversación con Kylian Mbappé. ¡Continúa practicando tu francés!', 20, 2, 'mbappe.gif');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `usuario`
 --
 
@@ -285,7 +322,8 @@ INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `email`, `celular`, `created_
 (1, 'juan', 'sierra', 'me@gmcil.co', '3212261758', '2023-06-05 17:59:29'),
 (2, 'alejandro', 'sierra', 'ivan@prueba.com', '3223851417', '2023-06-06 15:26:30'),
 (3, 'alejandro', 'sierra', 'MStivenR_1998@hotmail.com', '3223851417', '2023-06-06 23:57:40'),
-(4, 'alejandro', 'sierra', 'MStivenR_1998@hotmail.com', '3212261759', '2023-06-07 00:34:50');
+(4, 'alejandro', 'sierra', 'MStivenR_1998@hotmail.com', '3212261759', '2023-06-07 00:34:50'),
+(5, 'JUAN', 'AGUIA', 'gasierram@unal.edu.co', '3223851417', '2023-06-21 22:55:44');
 
 --
 -- Índices para tablas volcadas
@@ -325,6 +363,12 @@ ALTER TABLE `respuesta`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `resultado`
+--
+ALTER TABLE `resultado`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
@@ -350,13 +394,13 @@ ALTER TABLE `idioma`
 -- AUTO_INCREMENT de la tabla `pregunta`
 --
 ALTER TABLE `pregunta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT de la tabla `puntaje`
 --
 ALTER TABLE `puntaje`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `respuesta`
@@ -365,10 +409,16 @@ ALTER TABLE `respuesta`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
 
 --
+-- AUTO_INCREMENT de la tabla `resultado`
+--
+ALTER TABLE `resultado`
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas
