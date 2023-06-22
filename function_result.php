@@ -6,6 +6,7 @@ $url ="http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $components = parse_url($url);
 parse_str($components['query'], $results);
 $id = $results['id']; 
+$cat = $results['cat']; 
 
 $puntaje_final = score($id);
 
@@ -60,6 +61,51 @@ function score($id){
   
   }
 
+  function result($cat, $range){
+    $con = dbconnect();
+
+    $sql_select_category_filled = "SELECT * FROM resultado WHERE rango = ".$range." and categoria = ".$cat." order by rango desc limit 1";
+  
+    $rs = mysqli_query($con, $sql_select_category_filled);
+  
+    if (!$rs) {
+        echo "Error ";
+    } else {
+        
+        $fila = $rs->fetch_assoc();
+
+        if(isset($fila["descripcion"] )){
+            return $fila["descripcion"];
+            $con->close();
+        }else{
+            return 0;
+        }
+    }
+  
+  }
+
+  function imgresult($cat, $range){
+    $con = dbconnect();
+
+    $sql_select_category_filled = "SELECT * FROM resultado WHERE rango = ".$range." and categoria = ".$cat." order by rango desc limit 1";
+  
+    $rs = mysqli_query($con, $sql_select_category_filled);
+  
+    if (!$rs) {
+        echo "Error ";
+    } else {
+        
+        $fila = $rs->fetch_assoc();
+
+        if(isset($fila["ruta"] )){
+            return $fila["ruta"];
+            $con->close();
+        }else{
+            return 0;
+        }
+    }
+  
+  }
 
   function scoreCategory($id, $cat){
     $con = dbconnect();

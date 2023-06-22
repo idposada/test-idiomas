@@ -65,7 +65,7 @@ function category_filled($id, $cat){
             if($fila["id_categoria"]>3)
             {
                 $con->close();
-                header("Location: resultado.php?id=".$id);
+                header("Location: resultado.php?id=".$id."&cat=".$cat);
 
             }elseif($cat == $fila["id_categoria"]){
               return true;

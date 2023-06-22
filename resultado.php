@@ -21,7 +21,9 @@
   </section>
 
   <section class="row container resultado">
-    <img src="img/img-resultado.png" alt="">
+  <?php
+    $link= imgresult($cat,score($id));
+    echo "<img src='img/".$link."' alt=''>;" ?>
 
     <img src="img/img-indicador.png" alt="">
 
@@ -30,10 +32,8 @@
   </div>
 
   <div class="text-resultado">
-    ¡Sigue practicando!
-Tu nivel de inglés actual te sirve
-para mantener una charla
-con un niño de tres años.
+  <?php echo result($cat,score($id));?>
+
   </div>
 
   <img src="img/img-abajo.png" alt="" style="width: 100%;">

@@ -4,7 +4,17 @@
 <section class="bg-morado">
 
   <div class="container center num-pregunta">
-    <?php echo $preg ?> / 15
+    <?php 
+    
+    if($cat==1){
+      echo $preg;
+
+    }
+    else{
+
+      $auxquest= intval($preg)-15;
+      echo $auxquest;
+    }?> / 15
 
     <div class="timeline">
       <img src="img/timeline.png" alt="">
@@ -26,14 +36,25 @@
 
             //  print_r($input);
             //print_r($quest) ;
-           echo utf8_encode($quest[0][5]);
+
+            echo utf8_encode($quest[0][5]);
+
             // echo "pregunta ".$preg;
 
         ?>
       </h2>
 
       <div class="img-pregunta animate__animated animate__zoomIn">
-      <?php echo "<img src='img/img-pregunta".$preg.".png' alt=''>"; ?>
+      <?php
+      $aux=$preg-15;
+
+      if($cat == 1){
+        echo "<img src='img/img-pregunta".$preg.".png' alt=''>"; 
+        
+      }else{
+
+        echo "<img src='img/img-pregunta".$aux.".png' alt=''>";
+      }  ?>
       </div>
 
       <div class="respuestas animate__animated animate__bounceIn">
