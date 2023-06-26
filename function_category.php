@@ -14,7 +14,7 @@ if(!isset($_REQUEST['count']) ){
 
  
 if($_REQUEST['count']>=1){
-  header("Location: resultado.php?id=".$id);
+  header("Location: resultado.php?id=".$id."&cat=".$cat);
 
 }
 

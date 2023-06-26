@@ -64,6 +64,21 @@ function score($id){
   function result($cat, $range){
     $con = dbconnect();
 
+    if($range>0 && $range<=10){
+        $range=10;
+    }
+    elseif($range>10 && $range<=19){
+        $range=19;
+
+    }
+    elseif($range>19 && $range<=25){
+        $range=25;
+
+    }
+    elseif($range>25 && $range<=30){
+        $range=30;
+
+    }
     $sql_select_category_filled = "SELECT * FROM resultado WHERE rango = ".$range." and categoria = ".$cat." order by rango desc limit 1";
   
     $rs = mysqli_query($con, $sql_select_category_filled);

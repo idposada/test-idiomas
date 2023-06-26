@@ -12,7 +12,7 @@ if(!isset($_REQUEST['id_pregunta']) ){
     $_REQUEST['id_pregunta'] = 0;
  }
 
-$final = 21;
+$final = 20;
 $id_pregunta = $_REQUEST['id_pregunta'];
 
 $j= $_REQUEST['j'];
@@ -21,15 +21,15 @@ $puntaje = $_REQUEST['puntaje'] ;
 
 
 $input = array(
-    1=>array(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20),
-    2=> array(0,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40));
+    1=>array(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19),
+    2=> array(0,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39));
     
   $input = $input[$cat];
 //   shuffle($input);
 
 
 //Si el array esta vacio respondio todas las preguntas
-if($j != 21)
+if($j != 20)
 {
     
     $preg = $input[$j];
@@ -50,7 +50,14 @@ if($j != 21)
 
             // $id_pregunta = $id_pregunta + 1;
             
-            $puntaje = $puntaje + 10;
+            if($id_pregunta >=15 && $id_pregunta < 20 ){
+                $puntaje += 0.5;
+        
+            }
+            else{
+                $puntaje += 2;
+        
+            }
 
         }
         else
@@ -65,7 +72,14 @@ elseif($final == $j)
     $j =$j + 1;
     $id_pregunta = $id_pregunta - 1;
     $indice_correcta = $_REQUEST['correcta'];
-    $puntaje += 10;
+    if($id_pregunta >=15 && $id_pregunta <= 20 ){
+        $puntaje += 0.5;
+
+    }
+    else{
+        $puntaje += 2;
+
+    }
 
     if(isset($_REQUEST['r']))
     {

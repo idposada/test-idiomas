@@ -12,7 +12,7 @@
     }
     else{
 
-      $auxquest= intval($preg)-15;
+      $auxquest= intval($preg)-19;
       echo $auxquest;
     }?> / 15
 
@@ -36,6 +36,9 @@
 
             //  print_r($input);
             //print_r($quest) ;
+            //var_dump($quest[0]);
+
+//            echo utf8_encode($quest[0]);
 
             echo utf8_encode($quest[0][5]);
 
@@ -46,7 +49,7 @@
 
       <div class="img-pregunta animate__animated animate__zoomIn">
       <?php
-      $aux=$preg-15;
+      $aux=$preg-19;
 
       if($cat == 1){
         echo "<img src='img/img-pregunta".$preg.".png' alt=''>"; 
