@@ -14,7 +14,8 @@ if(!isset($_REQUEST['count']) ){
 
  
 if($_REQUEST['count']>=1){
-  header("Location: resultado.php?id=".$id."&cat=".$cat);
+  $categoria=$_REQUEST['count'];
+  header("Location: resultado.php?id=".$id."&cat=".$categoria);
 
 }
 
@@ -62,7 +63,7 @@ function category_filled($id, $cat){
         $fila = $rs->fetch_assoc();
 
         if(isset($fila["id_categoria"] )){
-            if($fila["id_categoria"]>3)
+            if($fila["id_categoria"]>0)
             {
                 $con->close();
                 header("Location: resultado.php?id=".$id."&cat=".$cat);

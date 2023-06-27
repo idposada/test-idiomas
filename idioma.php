@@ -1,6 +1,6 @@
 <?php include('header.php') ?>
 <?php require_once('function_category.php') ;
-      finished($id, 1);
+      // finished($id, $cat);
     ?>
 <main>
   <section class="row container nommbres">

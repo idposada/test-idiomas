@@ -481,3 +481,15 @@ margin-top: 12%;
   color: #fff;
   box-shadow: none;
 }
+
+
+.modal {
+  background-color: transparent!important;
+
+  /* max-height: 68%;
+  width: 32%; */
+}
+
+.modal .modal-content {
+  padding: 0px;
+}

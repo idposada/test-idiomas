@@ -14,7 +14,7 @@
 
       $auxquest= intval($preg)-19;
       echo $auxquest;
-    }?> / 15
+    }?> / 19
 
     <div class="timeline">
       <img src="img/timeline.png" alt="">
@@ -89,7 +89,7 @@
   </div>
   <div id="rtaok" class="modal" trackId="">
     <div class="modal-content">
-      <a onclick="cerrarModOk()"><img src='img/pregunta-correcta.png' /></a>
+      <a onclick="cerrarModOk()"><img src='img/pregunta-correcta.png' width="350px" /></a>
     </div>
   </div>
 
@@ -97,7 +97,7 @@
    <!-- Modal Structure -->
    <div id="rtamal" class="modal" trackId="">
     <div class="modal-content">
-      <a onclick="cerrarModBad()"><img src='img/pregunta-errada.png' /></a>
+      <a onclick="cerrarModBad()"><img src='img/pregunta-errada.png' width="350px" /></a>
     </div>
   </div>
 </section>

@@ -17,7 +17,7 @@ $id_pregunta = $_REQUEST['id_pregunta'];
 
 $j= $_REQUEST['j'];
 $fallo = "false";
-$puntaje = $_REQUEST['puntaje'] ;
+$puntaje = 0.0 + floatval($_REQUEST['puntaje']) ;
 
 
 $input = array(
@@ -50,8 +50,8 @@ if($j != 20)
 
             // $id_pregunta = $id_pregunta + 1;
             
-            if($id_pregunta >=15 && $id_pregunta < 20 ){
-                $puntaje += 0.5;
+            if($j >=10 && $j < 15 ){
+                $puntaje += 0.4;
         
             }
             else{
@@ -72,8 +72,8 @@ elseif($final == $j)
     $j =$j + 1;
     $id_pregunta = $id_pregunta - 1;
     $indice_correcta = $_REQUEST['correcta'];
-    if($id_pregunta >=15 && $id_pregunta <= 20 ){
-        $puntaje += 0.5;
+    if($j >=10 && $j < 15 ){
+        $puntaje += 0.4;
 
     }
     else{
@@ -92,7 +92,7 @@ elseif($final == $j)
         }
         save_score($id, $cat,$puntaje);
         $count_cat = 0;
-        $count_cat += $cat;
+        $count_cat = $cat;
 
        header("Location: idioma.php?id=".$id."&count=".$count_cat);
     }

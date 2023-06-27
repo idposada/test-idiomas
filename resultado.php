@@ -23,16 +23,16 @@
   <section class="row container resultado">
   <?php
     $link= imgresult($cat,score($id));
-    echo "<img src='img/".$link."' alt=''>;" ?>
+    echo "<img src='img/".$link."' alt=''>" ?>
 
     <img src="img/img-indicador.png" alt="">
 
     <div class="num-puntaje">
-    <?php echo score($id);?>
+    <?php echo round(score($id));?>
   </div>
 
   <div class="text-resultado">
-  <?php echo result($cat,score($id));?>
+  <?php echo textresult($cat,score($id));?>
 
   </div>
 

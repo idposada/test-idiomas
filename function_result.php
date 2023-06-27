@@ -52,7 +52,24 @@ function score($id){
         $fila = $rs->fetch_assoc();
 
         if(isset($fila["puntaje"] )){
-            return $fila["puntaje"];
+            $range=$fila["puntaje"];
+            // if($range>0 && $range<=10){
+            //     $range=10;
+            // }
+            // elseif($range>10 && $range<=19){
+            //     $range=19;
+        
+            // }
+            // elseif($range>19 && $range<=25){
+            //     $range=25;
+        
+            // }
+            // elseif($range>25 && $range<=30){
+            //     $range=30;
+        
+            // }
+        
+            return $range;
             $con->close();
         }else{
             return 0;
@@ -61,7 +78,28 @@ function score($id){
   
   }
 
-  function result($cat, $range){
+  function result($range){
+    $con = dbconnect();
+
+    if($range>0 && $range<=10){
+        $range=10;
+    }
+    elseif($range>10 && $range<=19){
+        $range=19;
+
+    }
+    elseif($range>19 && $range<=25){
+        $range=25;
+
+    }
+    elseif($range>25 && $range<=30){
+        $range=30;
+
+    }
+    return $range;
+  }  
+  
+  function textresult($cat, $range){
     $con = dbconnect();
 
     if($range>0 && $range<=10){
@@ -101,6 +139,8 @@ function score($id){
 
   function imgresult($cat, $range){
     $con = dbconnect();
+
+    $range=result($range);
 
     $sql_select_category_filled = "SELECT * FROM resultado WHERE rango = ".$range." and categoria = ".$cat." order by rango desc limit 1";
   
