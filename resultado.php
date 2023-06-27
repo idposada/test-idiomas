@@ -23,7 +23,7 @@
   <section class="row container resultado">
   <?php
     $link= imgresult($cat,score($id));
-    echo "<img src='img/".$link."' alt=''>" ?>
+    echo "<img class='img-gif' src='img/".$link."' alt=''>" ?>
 
     <img src="img/img-indicador.png" alt="">
 

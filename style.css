@@ -406,6 +406,10 @@ color: #FFFFFF;
 
 }
 
+.img-gif{
+  width: 100%;
+}
+
 .img-pregunta > img:nth-child(1) {
 width: 100%;
 }
@@ -433,7 +437,7 @@ color: #6B7580;
   font-family: 'acherus_grotesqueextrabold';
 font-style: normal;
 font-weight: 850;
-font-size: 40px;
+font-size: 68px;
 line-height: 50px;
 /* identical to box height */
 margin-top: -16%;
