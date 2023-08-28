@@ -4,8 +4,8 @@
 <section class="bg-morado">
 
   <div class="container center num-pregunta">
-    <?php 
-    
+    <?php
+
     if($cat==1){
       echo $preg;
 
@@ -24,27 +24,19 @@
     <div class="frame-pregunta">
 
       <h3 class="text-gris animate__animated animate__fadeIn">
-        Select an answer
+        <?php 
+
+          if ($cat == 1) { ?>
+              Select an answer     
+           <?php }elseif ($cat == 2) { ?>
+               Choisissez la bonne réponse
+            <?php }  ?>
+
+      
       </h3>
 
       <h2 class="txt-pregunta animate__animated animate__fadeIn">
-      <?php
-
-
-
-            // echo $j;
-
-            //  print_r($input);
-            //print_r($quest) ;
-            //var_dump($quest[0]);
-
-//            echo utf8_encode($quest[0]);
-
-            echo utf8_encode($quest[0][5]);
-
-            // echo "pregunta ".$preg;
-
-        ?>
+      <?php   echo utf8_encode($quest[0][5]);  ?>
       </h2>
 
       <div class="img-pregunta animate__animated animate__zoomIn">
@@ -52,8 +44,8 @@
       $aux=$preg-19;
 
       if($cat == 1){
-        echo "<img src='img/img-pregunta".$preg.".png' alt=''>"; 
-        
+        echo "<img src='img/img-pregunta".$preg.".png' alt=''>";
+
       }else{
 
         echo "<img src='img/img-pregunta".$aux.".png' alt=''>";
@@ -67,14 +59,14 @@
           $link = $j+1;
           $score = $puntaje+0;
           ?>
-          
-        
-          
+
+
+
           <a id="<?php echo $i?>" class="questionClass" onclick="mifunc(' <?php echo "?category=".$cat."&id=".$id."&j=".$link."&r=".$i."&puntaje=".$score."&correcta=".$quest[$i][2] ?>')"
             href="<?php echo "?category=".$cat."&id=".$id."&j=".$link."&r=".$i."&puntaje=".$score."&correcta=".$quest[$i][2] ?>">
               <?php Echo "<button id='rta".$quest[$i][2]."' class='btn waves-effect waves-light btn-respuesta respuesta button".$quest[$i][2]."' > ".utf8_encode($quest[$i][1])."</button>"; ?>
               <!-- onClick='choose(".$quest[$i][2].")'>".$quest[$i][1]." -->
-            </a>        
+            </a>
             <?php
           }
         ?>
@@ -129,7 +121,7 @@
   }
 
 
-  
+
 function cerrarModOk(){
   const elem = document.getElementById('rtaok');
   const instance = M.Modal.init(elem, {dismissible: false});

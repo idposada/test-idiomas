@@ -11,7 +11,7 @@
         <div class="abajo">
 
           <div class="txt-abajo animate__animated animate__fadeIn">
-            quiz application to train your knowledge
+            Test para poner a prueba tus conocimientos
           </div>
           <div class="boton center ">
 

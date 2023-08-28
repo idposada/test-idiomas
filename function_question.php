@@ -104,10 +104,8 @@ else
   
 
 function questions($cat, $preg){
-    
-    $enlace = mysqli_connect("localhost", "root", "", "test-idiomas");
-
-    /* comprobar la conexión */
+    $enlace = mysqli_connect('127.0.0.1', 'pizarraweb', '!1q2w3e4r5t!', 'ueb_testidiomas');
+            /* comprobar la conexión */
     if (mysqli_connect_errno()) {
         printf("Falló la conexión: %s\n", mysqli_connect_error());
         exit();

@@ -72,10 +72,19 @@ function score($id){
             return $range;
             $con->close();
         }else{
+
             return 0;
         }
     }
   
+  }
+
+  function update_user($user, $idioma){
+    $con = dbconnect();
+
+    $sql_update_user = "UPDATE usuario SET idioma = $idioma WHERE id = $user";
+    $rs = mysqli_query($con, $sql_update_user);
+
   }
 
   function result($range){
@@ -184,4 +193,6 @@ function score($id){
     }
   
   }
+
+  update_user($id, $cat);
 ?>
