@@ -25,7 +25,7 @@ function dbconnect(){
   // define('DB_PASS','');
   // define('DB_SERVER','127.0.0.1');
 
-  $con = mysqli_connect('127.0.0.1', 'pizarraweb', '!1q2w3e4r5t!', 'ueb_testidiomas');
+  $con = mysqli_connect('127.0.0.1', 'root', '', 'test-idiomas');
 
   if (!$con) {
     die("Connection failed! " . mysqli_connect_error());

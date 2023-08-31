@@ -22,7 +22,8 @@ $puntaje = 0.0 + floatval($_REQUEST['puntaje']) ;
 
 $input = array(
     1=>array(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19),
-    2=> array(0,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39));
+    2=> array(0,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39),
+    3=> array(0,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58));
     
   $input = $input[$cat];
 //   shuffle($input);
@@ -47,7 +48,6 @@ if($j != 20)
         if($indice_correcta==1)
         {
             // $j=$j+1;
-
             // $id_pregunta = $id_pregunta + 1;
             
             if($j >=10 && $j < 15 ){
@@ -58,11 +58,6 @@ if($j != 20)
                 $puntaje += 2;
         
             }
-
-        }
-        else
-        {
-            // $fallo 	= "true";
         }
     }
 }
@@ -97,14 +92,10 @@ elseif($final == $j)
        header("Location: idioma.php?id=".$id."&count=".$count_cat);
     }
 }
-else
-{
-    // $pregunta = $preguntas[$id_pregunta];
-}
   
 
 function questions($cat, $preg){
-    $enlace = mysqli_connect('127.0.0.1', 'pizarraweb', '!1q2w3e4r5t!', 'ueb_testidiomas');
+    $enlace = mysqli_connect('127.0.0.1', 'root', '', 'test-idiomas');
             /* comprobar la conexión */
     if (mysqli_connect_errno()) {
         printf("Falló la conexión: %s\n", mysqli_connect_error());

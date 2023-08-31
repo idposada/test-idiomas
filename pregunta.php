@@ -1,6 +1,6 @@
 <?php include('header.php') ?>
 
-<?php include('function_question.php');       ?>
+<?php include('function_question.php'); ?>
 <section class="bg-morado">
 
   <div class="container center num-pregunta">
@@ -12,8 +12,7 @@
     }
     else{
 
-      $auxquest= intval($preg)-19;
-      echo $auxquest;
+      echo $j;
     }?> / 19
 
     <div class="timeline">
@@ -29,9 +28,10 @@
           if ($cat == 1) { ?>
               Select an answer     
            <?php }elseif ($cat == 2) { ?>
-               Choisissez la bonne réponse
+              Choisissez la bonne réponse
+            <?php }elseif ($cat == 3) { ?>
+              Seleziona una risposta
             <?php }  ?>
-
       
       </h3>
 
@@ -41,14 +41,13 @@
 
       <div class="img-pregunta animate__animated animate__zoomIn">
       <?php
-      $aux=$preg-19;
 
       if($cat == 1){
         echo "<img src='img/img-pregunta".$preg.".png' alt=''>";
 
       }else{
 
-        echo "<img src='img/img-pregunta".$aux.".png' alt=''>";
+        echo "<img src='img/img-pregunta".$j.".png' alt=''>";
       }  ?>
       </div>
 
@@ -70,12 +69,6 @@
             <?php
           }
         ?>
-
-        <!-- <button class="btn waves-effect waves-light btn-respuesta-correcta" type="submit" name="action">
-          Submit
-        </button>
-        </div> -->
-
     </div>
 
   </div>
@@ -117,7 +110,7 @@
       const instance = M.Modal.init(elem, {dismissible: false});
       instance.open();
     }
-    console.log(a);
+    // console.log(a);
   }
 
 

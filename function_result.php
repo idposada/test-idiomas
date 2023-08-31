@@ -53,22 +53,7 @@ function score($id){
 
         if(isset($fila["puntaje"] )){
             $range=$fila["puntaje"];
-            // if($range>0 && $range<=10){
-            //     $range=10;
-            // }
-            // elseif($range>10 && $range<=19){
-            //     $range=19;
-        
-            // }
-            // elseif($range>19 && $range<=25){
-            //     $range=25;
-        
-            // }
-            // elseif($range>25 && $range<=30){
-            //     $range=30;
-        
-            // }
-        
+
             return $range;
             $con->close();
         }else{

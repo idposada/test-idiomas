@@ -52,6 +52,18 @@
 
 
     </div>
+    
+    <div class="idioma-solo animate__animated animate__fadeInUp">
+      <img src="img/fr-icon.png" alt="">
+      <div class="info-idioma">
+        <span class="nombre-idioma">Italiano</span>
+        <span class="num-preguntas">15 questions</span>
+      </div>
+
+      <a class="<?php if(category_filled($id, 3)){echo 'cat-disabled';} ?>" href=<?php echo "pregunta.php?category=3&id=".$id."&j=1&correcta=0&puntaje=0" ?> > <img src="img/icon-flecha.png" alt=""> </a>
+
+
+    </div>
 
 
   </section>
