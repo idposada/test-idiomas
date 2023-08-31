@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.11
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Aug 28, 2023 at 01:55 PM
--- Server version: 5.7.42-cll-lve
--- PHP Version: 7.4.33
+-- Servidor: 127.0.0.1:3306
+-- Tiempo de generación: 31-08-2023 a las 08:10:49
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,61 +18,63 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ueb_testidiomas`
+-- Base de datos: `test-idiomas`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categoria`
+-- Estructura de tabla para la tabla `categoria`
 --
 
 CREATE TABLE `categoria` (
   `id` int(9) NOT NULL,
   `nombre` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `categoria`
+-- Volcado de datos para la tabla `categoria`
 --
 
 INSERT INTO `categoria` (`id`, `nombre`) VALUES
 (1, 'Ingles'),
-(2, 'Frances');
+(2, 'Frances'),
+(3, 'Italiano');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `idioma`
+-- Estructura de tabla para la tabla `idioma`
 --
 
 CREATE TABLE `idioma` (
   `id` int(11) NOT NULL,
   `idioma` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `idioma`
+-- Volcado de datos para la tabla `idioma`
 --
 
 INSERT INTO `idioma` (`id`, `idioma`) VALUES
 (1, 'Ingles'),
-(2, 'Frances');
+(2, 'Frances'),
+(3, 'Italiano');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pregunta`
+-- Estructura de tabla para la tabla `pregunta`
 --
 
 CREATE TABLE `pregunta` (
   `id` int(11) NOT NULL,
   `pregunta` longtext NOT NULL,
   `id_categoria` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `pregunta`
+-- Volcado de datos para la tabla `pregunta`
 --
 
 INSERT INTO `pregunta` (`id`, `pregunta`, `id_categoria`) VALUES
@@ -114,12 +115,31 @@ INSERT INTO `pregunta` (`id`, `pregunta`, `id_categoria`) VALUES
 (35, 'Mon meilleur ami est Claude. Est-ce que tu le connais?', 2),
 (36, 'Est-ce que tu vas souvent à la bibliothèque? ', 2),
 (37, 'Qu\'est-ce qu\'il t\'a dit sur le projet?', 2),
-(38, 'Quels sont tes plans pour les vacances?', 2);
+(38, 'Quels sont tes plans pour les vacances?', 2),
+(39, 'Scegli la risposta giusta Cos\'è questo?', 3),
+(40, 'Che tempo fa oggi?', 3),
+(41, 'Quanto spesso vai al cinema?', 3),
+(42, 'La figlia di mio fratello è venuta a casa mia la domenica scorsa. Chi?', 3),
+(43, 'Da dove vieni?', 3),
+(44, 'Che cosa pensi del nuovo ristorante cinese?', 3),
+(45, 'Hai avuto delle lezione con il nuovo professore?', 3),
+(46, 'Cosa faresti se fossi un animale?', 3),
+(47, 'Quando sarà filmato il film?', 3),
+(48, 'Se alzi (1)_____ sguardo al cielo quando piove e c\'è (2)_____ sole, vedrai (3)_____arcobaleno. È un fenomeno magico che è formato (4)_____ natura. Rosso, arancione, giallo, verde, blu e viola sono (5)_____ colori che si possono vedere nell\'arcobaleno.', 3),
+(49, 'Se alzi (1)_____ sguardo al cielo quando piove e c\'è (2)_____ sole, vedrai (3)_____arcobaleno. È un fenomeno magico che è formato (4)_____ natura. Rosso, arancione, giallo, verde, blu e viola sono (5)_____ colori che si possono vedere nell\'arcobaleno.', 3),
+(50, 'Se alzi (1)_____ sguardo al cielo quando piove e c\'è (2)_____ sole, vedrai (3)_____arcobaleno. È un fenomeno magico che è formato (4)_____ natura. Rosso, arancione, giallo, verde, blu e viola sono (5)_____ colori che si possono vedere nell\'arcobaleno.', 3),
+(51, 'Se alzi (1)_____ sguardo al cielo quando piove e c\'è (2)_____ sole, vedrai (3)_____arcobaleno. È un fenomeno magico che è formato (4)_____ natura. Rosso, arancione, giallo, verde, blu e viola sono (5)_____ colori che si possono vedere nell\'arcobaleno.', 3),
+(52, 'Se alzi (1)_____ sguardo al cielo quando piove e c\'è (2)_____ sole, vedrai (3)_____arcobaleno. È un fenomeno magico che è formato (4)_____ natura. Rosso, arancione, giallo, verde, blu e viola sono (5)_____ colori che si possono vedere nell\'arcobaleno.', 3),
+(53, 'Dov\'è sarà Giorgina? È tardi e dobbiamo andare.', 3),
+(54, 'Il mio migliore amico è Paul. Lo conosci?', 3),
+(55, 'Dove lavori?', 3),
+(56, 'Dov’è Davide?', 3),
+(57, 'Quando apre questo negozio?', 3);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `puntaje`
+-- Estructura de tabla para la tabla `puntaje`
 --
 
 CREATE TABLE `puntaje` (
@@ -127,10 +147,10 @@ CREATE TABLE `puntaje` (
   `id_usuario` int(9) NOT NULL,
   `id_categoria` int(9) NOT NULL,
   `puntaje` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `puntaje`
+-- Volcado de datos para la tabla `puntaje`
 --
 
 INSERT INTO `puntaje` (`id`, `id_usuario`, `id_categoria`, `puntaje`) VALUES
@@ -403,12 +423,14 @@ INSERT INTO `puntaje` (`id`, `id_usuario`, `id_categoria`, `puntaje`) VALUES
 (277, 381, 1, 13.6),
 (278, 384, 1, 23.6),
 (279, 385, 1, 27.2),
-(280, 386, 1, 13.6);
+(280, 386, 1, 13.6),
+(281, 390, 3, 30),
+(282, 391, 3, 14.8);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `respuesta`
+-- Estructura de tabla para la tabla `respuesta`
 --
 
 CREATE TABLE `respuesta` (
@@ -416,10 +438,10 @@ CREATE TABLE `respuesta` (
   `descripcion` longtext NOT NULL,
   `correcta` int(11) NOT NULL,
   `id_pregunta` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `respuesta`
+-- Volcado de datos para la tabla `respuesta`
 --
 
 INSERT INTO `respuesta` (`id`, `descripcion`, `correcta`, `id_pregunta`) VALUES
@@ -536,12 +558,69 @@ INSERT INTO `respuesta` (`id`, `descripcion`, `correcta`, `id_pregunta`) VALUES
 (111, 'Il me dit que le projet allé bien et qu’il commencera l\'année prochaine. ', 0, 37),
 (112, 'Je ne vais pas voyager parce que je dois ranger quelques documents à la maison .', 1, 38),
 (113, 'Je vais à voyager à la plage avec mes amis et ma copine. ', 0, 38),
-(114, 'Je ne vais pas voyager mais je vais à dormir beaucoup parce que je suis fatigué. ', 0, 38);
+(114, 'Je ne vais pas voyager mais je vais à dormir beaucoup parce que je suis fatigué. ', 0, 38),
+(115, 'Questa è una giacca blu. ', 1, 39),
+(116, 'Questo è un giacca blu', 0, 39),
+(117, 'Queste sono delle giacche blu.', 0, 39),
+(118, 'Oggi fa caldo', 0, 40),
+(119, 'Oggi c’è la nebbia', 1, 40),
+(120, 'Oggi fa nebbia ', 0, 40),
+(121, 'Non vado al cinema mai.', 0, 41),
+(122, 'Non vado mai al cinema.', 1, 41),
+(123, 'Non mai vado al cinema.', 0, 41),
+(124, 'Mia cugina', 0, 42),
+(125, 'Mia zia', 0, 42),
+(126, 'Mia nipote', 1, 42),
+(127, 'Vengo a Colombia', 0, 43),
+(128, 'Vengo dalla Colombia.', 1, 43),
+(129, 'Vengo in Colombia.', 0, 43),
+(130, 'Non mi piace. É il peggiore ristorante in cui sono stato.', 0, 44),
+(131, 'Non mi piace. É il peggior ristorante in cui sono stato. ', 1, 44),
+(132, 'Non mi piace. Non è il peggior ristorante in cui sono stato', 0, 44),
+(133, 'Sì. Credo che lui non insegni così bene come l\'altro professore.\r\n', 1, 45),
+(134, 'Sì. Credo che lui non insegna così bene come l\'altro professore.\r\n', 0, 45),
+(135, 'Sì. Credo che lui non insegni bene tanto l\'altro professore\r\n', 0, 45),
+(136, 'Se faccio un animale, sono un leone.\r\n', 0, 46),
+(137, 'Se fossi un animale, sarei un leone.', 1, 46),
+(138, 'Se faccio un animale, sarei un leone.\r\n', 0, 46),
+(139, 'Il film è filmato la prossima settimana.\r\n', 0, 47),
+(140, 'Il film sarà filmato la prossima settimana.\r\n', 1, 47),
+(141, 'Il film è filmata la prossima settimana.\r\n', 0, 47),
+(142, '1. lo', 1, 48),
+(143, '1. il\r\n', 0, 48),
+(144, '1. la\r\n', 0, 48),
+(145, '2. la', 0, 49),
+(146, '2. lo\r\n', 0, 49),
+(147, '2. il\r\n', 1, 49),
+(148, '3. lo\r\n', 0, 50),
+(149, '3. l’\r\n', 1, 50),
+(150, '3. il ', 0, 50),
+(151, '4. dalla\r\n', 1, 51),
+(152, '4. del\r\n', 0, 51),
+(153, '4. de la\r\n', 0, 51),
+(154, '1. li\r\n', 0, 52),
+(155, '5. gli\r\n', 0, 52),
+(156, '5. i \r\n', 1, 52),
+(157, 'Deve essere bloccata in un ingorgo.\r\n', 0, 53),
+(158, 'Dovrebbe essere bloccata in un ingorgo.\r\n', 0, 53),
+(159, 'Dovrà essere bloccata in un ingorgo.\r\n', 1, 53),
+(160, 'SÌ. Li conosco.\r\n', 0, 54),
+(161, 'SÌ. Gli conosco. \r\n', 0, 54),
+(162, 'SÌ. Lo conosco. \r\n', 1, 54),
+(163, 'Lavoro in questo ufficio per tre anni\r\n', 0, 55),
+(164, 'Lavoro in questo ufficio di tre anni\r\n', 0, 55),
+(165, 'Lavoro in questo ufficio da tre anni\r\n', 1, 55),
+(166, 'Pochi giorni fa Davide ha ritornato a casa sua.\r\n', 0, 56),
+(167, 'Pochi giorni fa Davide è ritornato a casa sua', 1, 56),
+(168, 'Pochi giorni fa Davide  ritornato a casa sua\r\n', 0, 56),
+(169, 'Spero che questo negozio apra domenica.\r\n', 1, 57),
+(170, 'Spero che questo negozio apri domenica.\r\n', 0, 57),
+(171, 'Spero che questo negozio apre domenica.\r\n', 0, 57);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `resultado`
+-- Estructura de tabla para la tabla `resultado`
 --
 
 CREATE TABLE `resultado` (
@@ -550,10 +629,10 @@ CREATE TABLE `resultado` (
   `rango` int(9) NOT NULL,
   `categoria` int(9) NOT NULL,
   `ruta` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `resultado`
+-- Volcado de datos para la tabla `resultado`
 --
 
 INSERT INTO `resultado` (`id`, `descripcion`, `rango`, `categoria`, `ruta`) VALUES
@@ -564,12 +643,16 @@ INSERT INTO `resultado` (`id`, `descripcion`, `rango`, `categoria`, `ruta`) VALU
 (5, '¡Wow, vas por buen camino!\n\n¡No te desanimes!\n\nSeguro no salió como esperabas, pero es cuestión de práctica y de estudiar más, petite sauterelle.', 10, 2, 'pinocho.gif'),
 (6, '¡Vas por buen camino, pero te falta un poco más!\n\nEsfuérzate un poco más para visitar París en tus próximas vacaciones con confianza.', 19, 2, 'rata.gif'),
 (7, 'Fantastique!\n\nPodrías mantener una conversación con Kylian Mbappé. ¡Continúa practicando tu francés!', 25, 2, 'mbappe.gif'),
-(10, 'Tu est un arbre mûr: Tes boutons ont fleuri, continue à travailler pour avoir\r\ndes fruits bientôt.', 30, 2, 'katysmile.gif');
+(10, 'Tu est un arbre mûr: Tes boutons ont fleuri, continue à travailler pour avoir\r\ndes fruits bientôt.', 30, 2, 'katysmile.gif'),
+(11, 'Sei un seme: hai bisogno di più acqua per germogliare', 10, 3, 'frank.gif'),
+(12, 'Sei un germoglio: hai iniziato il tuo processo di crescita, ma hai bisogno di prendere il sole più spesso.\r\n', 19, 3, 'chris.gif'),
+(13, 'Sei un albero giovane: i tuoi rami hanno iniziato a crescere, ora hai bisogno di fertilizzante per diventare più forte.', 25, 3, 'katy.gif'),
+(14, 'Sei un albero maturo: i tuoi fiori sono sbocciati, continua a lavorare per ottenere presto dei frutti.', 30, 3, 'katysmile.gif');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuario`
+-- Estructura de tabla para la tabla `usuario`
 --
 
 CREATE TABLE `usuario` (
@@ -579,11 +662,11 @@ CREATE TABLE `usuario` (
   `email` varchar(140) NOT NULL,
   `celular` varchar(11) NOT NULL,
   `idioma` int(11) DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `usuario`
+-- Volcado de datos para la tabla `usuario`
 --
 
 INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `email`, `celular`, `idioma`, `created_at`) VALUES
@@ -909,33 +992,38 @@ INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `email`, `celular`, `idioma`,
 (384, 'Irene Gonzalez', 'Gonzalez', 'irenedelvallegonzalezmartinez@gmail.com', '3026830391', 1, '2023-08-28 19:48:35'),
 (385, 'Estefany', 'Agray', 'estefanyagray12@gmail.com', '3142019248', 1, '2023-08-28 20:23:28'),
 (386, 'Mariana ', 'Laverde ', 'marianalaverdebravo@gmail.com', '3138983178', 1, '2023-08-28 20:52:29'),
-(387, 'Lauren ', 'RodrÃ­guez ', 'lorens20721@gmail.com', '3245897576', NULL, '2023-08-28 20:52:12');
+(387, 'Lauren ', 'RodrÃ­guez ', 'lorens20721@gmail.com', '3245897576', NULL, '2023-08-28 20:52:12'),
+(388, 'alejandro', 'sierra', 'fabian@hotmail.com', '3223851417', NULL, '2023-08-31 05:09:37'),
+(389, 'alejandro', 'sierra', 'fabian@hotmail.com', '3223851417', NULL, '2023-08-31 05:43:41'),
+(390, 'alejandro', 'sierra', 'ivan@prueba.com', '3223851417', 3, '2023-08-31 05:55:12'),
+(391, 'alejandro', 'sierra', 'admin@sdarfsdr', '3223851417', 3, '2023-08-31 05:56:50'),
+(392, 'alejandro', 'sierra', 'admin@sdarfsdr', '3212261759', NULL, '2023-08-31 05:57:54');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `categoria`
+-- Indices de la tabla `categoria`
 --
 ALTER TABLE `categoria`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `idioma`
+-- Indices de la tabla `idioma`
 --
 ALTER TABLE `idioma`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `pregunta`
+-- Indices de la tabla `pregunta`
 --
 ALTER TABLE `pregunta`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_categoria` (`id_categoria`);
 
 --
--- Indexes for table `puntaje`
+-- Indices de la tabla `puntaje`
 --
 ALTER TABLE `puntaje`
   ADD PRIMARY KEY (`id`),
@@ -943,75 +1031,75 @@ ALTER TABLE `puntaje`
   ADD KEY `categoria` (`id_categoria`);
 
 --
--- Indexes for table `respuesta`
+-- Indices de la tabla `respuesta`
 --
 ALTER TABLE `respuesta`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `resultado`
+-- Indices de la tabla `resultado`
 --
 ALTER TABLE `resultado`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `usuario`
+-- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `categoria`
+-- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `idioma`
+-- AUTO_INCREMENT de la tabla `idioma`
 --
 ALTER TABLE `idioma`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `pregunta`
+-- AUTO_INCREMENT de la tabla `pregunta`
 --
 ALTER TABLE `pregunta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
--- AUTO_INCREMENT for table `puntaje`
+-- AUTO_INCREMENT de la tabla `puntaje`
 --
 ALTER TABLE `puntaje`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=281;
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=283;
 
 --
--- AUTO_INCREMENT for table `respuesta`
+-- AUTO_INCREMENT de la tabla `respuesta`
 --
 ALTER TABLE `respuesta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=172;
 
 --
--- AUTO_INCREMENT for table `resultado`
+-- AUTO_INCREMENT de la tabla `resultado`
 --
 ALTER TABLE `resultado`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT for table `usuario`
+-- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=388;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=393;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `pregunta`
+-- Filtros para la tabla `pregunta`
 --
 ALTER TABLE `pregunta`
   ADD CONSTRAINT `id_categoria` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id`);
