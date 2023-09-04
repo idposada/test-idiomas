@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 31-08-2023 a las 08:10:49
+-- Tiempo de generación: 04-09-2023 a las 21:42:32
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -644,10 +644,10 @@ INSERT INTO `resultado` (`id`, `descripcion`, `rango`, `categoria`, `ruta`) VALU
 (6, '¡Vas por buen camino, pero te falta un poco más!\n\nEsfuérzate un poco más para visitar París en tus próximas vacaciones con confianza.', 19, 2, 'rata.gif'),
 (7, 'Fantastique!\n\nPodrías mantener una conversación con Kylian Mbappé. ¡Continúa practicando tu francés!', 25, 2, 'mbappe.gif'),
 (10, 'Tu est un arbre mûr: Tes boutons ont fleuri, continue à travailler pour avoir\r\ndes fruits bientôt.', 30, 2, 'katysmile.gif'),
-(11, 'Sei un seme: hai bisogno di più acqua per germogliare', 10, 3, 'frank.gif'),
-(12, 'Sei un germoglio: hai iniziato il tuo processo di crescita, ma hai bisogno di prendere il sole più spesso.\r\n', 19, 3, 'chris.gif'),
-(13, 'Sei un albero giovane: i tuoi rami hanno iniziato a crescere, ora hai bisogno di fertilizzante per diventare più forte.', 25, 3, 'katy.gif'),
-(14, 'Sei un albero maturo: i tuoi fiori sono sbocciati, continua a lavorare per ottenere presto dei frutti.', 30, 3, 'katysmile.gif');
+(11, 'Sei un seme: hai bisogno di più acqua per germogliare.', 10, 3, 'italiano.gif'),
+(12, 'Sei un germoglio: hai iniziato il tuo processo di crescita, ma hai bisogno di prendere il sole più spesso.\n', 19, 3, 'italiano.gif'),
+(13, 'Sei un albero giovane: i tuoi rami hanno iniziato a crescere, ora hai bisogno di fertilizzante per diventare più forte.', 25, 3, 'medrano.gif'),
+(14, 'Sei un albero maturo: i tuoi fiori sono sbocciati, continua a lavorare per ottenere presto dei frutti.', 30, 3, 'totti.gif');
 
 -- --------------------------------------------------------
 
